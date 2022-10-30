@@ -27,8 +27,6 @@ products:
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/build/classes/scala/main/game2048/logic/Right.class
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/build/classes/scala/main/game2048/logic/Up$.class
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/build/classes/scala/main/game2048/logic/Up.class
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/build/classes/scala/main/game2048/logic/TestShit$.class
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/build/classes/scala/main/game2048/logic/TestShit.class
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/build/classes/scala/main/game2048/logic/Empty$.class
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/build/classes/scala/main/game2048/logic/Empty.class
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/build/classes/scala/main/game2048/logic/Goal$.class
@@ -62,8 +60,6 @@ binary dependencies:
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/GameLogic.scala -> /Users/lauras/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.13.8/5a865f03a794b27e6491740c4c419a19e4511a3d/scala-library-2.13.8.jar
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala -> /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/rt.jar
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala -> /Users/lauras/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.13.8/5a865f03a794b27e6491740c4c419a19e4511a3d/scala-library-2.13.8.jar
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/rt.jar
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> /Users/lauras/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.13.8/5a865f03a794b27e6491740c4c419a19e4511a3d/scala-library-2.13.8.jar
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala -> /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/rt.jar
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala -> /Users/lauras/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.13.8/5a865f03a794b27e6491740c4c419a19e4511a3d/scala-library-2.13.8.jar
 source dependencies:
@@ -90,12 +86,7 @@ source dependencies:
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/GameLogic.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Board.scala
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/GameLogic.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Dimensions.scala
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/GameLogic.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/GameLogic.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/GameLogic.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Board.scala
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Dimensions.scala
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala
 external dependencies:
 class names:
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/engine/GameBase.scala -> engine.GameBase
@@ -126,8 +117,6 @@ class names:
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala -> game2048.logic.Right$
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala -> game2048.logic.Up
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Point.scala -> game2048.logic.Up$
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> game2048.logic.TestShit
-   /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/TestShit.scala -> game2048.logic.TestShit$
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala -> game2048.logic.Empty
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala -> game2048.logic.Empty$
    /Users/lauras/Documents/VU/Y2/P1 - OOFP/scala_projects/bonus/src/game2048/logic/Tile.scala -> game2048.logic.Goal

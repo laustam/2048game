@@ -9,9 +9,6 @@ class GameLogic(val randGen: RandomGenerator,
 
   var board: Board = Board.init(initialBoard, randGen)
 
-  println("Initial board: ")
-  TestShit.printBoard(board)
-
   def this(random: RandomGenerator, gridDims: Dimensions) =
     this(random, gridDims, makeEmptyBoard(gridDims))
 
@@ -20,29 +17,18 @@ class GameLogic(val randGen: RandomGenerator,
 
   def moveLeft(): Unit = {
     board = board.step(Left)
-    println("Move left: ")
-    TestShit.printBoard(board)
   }
 
   def moveRight(): Unit = {
     board = board.step(Right)
-
-    println("Move right: ")
-    TestShit.printBoard(board)
   }
 
   def moveDown(): Unit = {
     board = board.step(Down)
-
-    println("Move down: ")
-    TestShit.printBoard(board)
   }
 
   def moveUp(): Unit = {
     board = board.step(Up)
-
-    println("Move up: ")
-    TestShit.printBoard(board)
   }
 
   def isGameOver: Boolean = board.isFull
@@ -51,9 +37,7 @@ class GameLogic(val randGen: RandomGenerator,
 
   def getScore: Int = board.score
 
-  def getCellType(p: Point): Tile = {
-    board.at(p).get
-  }
+  def getCellType(p: Point): Tile = board.at(p).get
 }
 
 object GameLogic {

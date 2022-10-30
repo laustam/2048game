@@ -9,15 +9,6 @@ case class Color(red: Float, green: Float, blue: Float, alpha: Float) {
   // This is called on new Color(r, g, b)
   def this(red: Float, green: Float, blue: Float) = this(red, green, blue, 255)
 
-  def linearInterpolation(l: Float, r: Float, t: Float): Float = (1 - t) * l + t * r
-
-  def interpolate(fraction: Float, rhs: Color): Color =
-    Color(linearInterpolation(red,   rhs.red,   fraction),
-          linearInterpolation(green, rhs.green, fraction),
-          linearInterpolation(blue,  rhs.blue,  fraction),
-          linearInterpolation(alpha, rhs.alpha, fraction)
-    )
-
 }
 
 /** Color companion object */
@@ -38,10 +29,7 @@ object Color {
   val COLOR_512 = Color(237, 200, 80)
   val COLOR_1024 = Color(237, 197, 63)
   val COLOR_2048 = Color(237, 194, 46)
-  val Black = Color(0,0,0)
-  val Red = Color(255,0,0)
+  val Black = Color(0, 0, 0)
   val Brown = Color(74, 38, 0)
-  val Grey = Color(100,100,100)
-  val White = Color(0,0,0)
-
+  val Grey = Color(100, 100, 100)
 }

@@ -15,7 +15,14 @@ This bonus game is a simple implementation of the classic 4-by-4 2048 tile game.
 4. Enjoy!
 
 ## Sneak peaks of the game
+Opening screen
 ![Opening screen](openingscreen.png)
+
+Oh no! So many tiles on screen!
 ![Oh no! So many tiles on screen!](manytiles.png)
+
+Game over screen
 ![Game over screen](gameover.png)
+
+Victory screen! Woohoo
 ![Victory screen! Woohoo](victory.png)
