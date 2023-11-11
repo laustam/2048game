@@ -140,10 +140,13 @@ class Game extends GameBase {
 }
 
 object Game {
+
+
   val WidthCellInPixels: Double = 15 * GameLogic.DrawSizeFactor
   val HeightCellInPixels: Double = WidthCellInPixels
 
   def main(args: Array[String]): Unit = {
     PApplet.main("game2048.game.Game")
   }
+
 }

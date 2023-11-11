@@ -1,6 +1,6 @@
 # 2048
 
-This bonus game is a simple implementation of the classic 4-by-4 2048 tile game. The game's objective is to merge tiles
+This is a simple implementation of the classic 4-by-4 2048 tile game. The game's objective is to merge tiles
 until the target tile 2048 has been created.
 
 ## Game Specifications
@@ -15,20 +15,22 @@ until the target tile 2048 has been created.
 ## How to run the game
 
 1. Open your terminal
-2. Navigate to the `bonus` directory
+2. Navigate to the `2048game` directory
 3. Run the command ```./gradlew run```
 4. Enjoy!
+
+*Note:* I am using Java 8 version 1.8. I was not able to run it using different Java versions, only God knows why...
 
 ## Sneak peaks of the game
 
 Opening screen
-![Opening screen](openingscreen.png)
+![Opening screen](images/openingscreen.png)
 
 Oh no! So many tiles on screen!
-![Oh no! So many tiles on screen!](manytiles.png)
+![Oh no! So many tiles on screen!](images/manytiles.png)
 
 Game over screen
-![Game over screen](gameover.png)
+![Game over screen](images/gameover.png)
 
 Victory screen! Woohoo
-![Victory screen! Woohoo](victory.png)
+![Victory screen! Woohoo](images/victory.png)

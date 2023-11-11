@@ -31,7 +31,7 @@ case class Board(board: Seq[Seq[Tile]],
       else if (move(dir).goalReached)
         move(dir).copy(isWon = true)
       else
-        move(dir).addNewTile()
+        move(dir).addNewTile
     }.checkIfFull
   }
 
@@ -116,7 +116,7 @@ case class Board(board: Seq[Seq[Tile]],
     resSeq
   }
 
-  def addNewTile(): Board = {
+  def addNewTile: Board = {
     def getRandomPoint: Point = {
       val availPoints: Seq[Point] = emptyPoints
       val randIndex: Int = randGen.randomInt(availPoints.length)
@@ -138,6 +138,6 @@ case class Board(board: Seq[Seq[Tile]],
 
 object Board {
   def init(initialBoard: Seq[Seq[Tile]], randGen: RandomGenerator): Board = {
-    Board(initialBoard, randGen).addNewTile().addNewTile()
+    Board(initialBoard, randGen).addNewTile.addNewTile
   }
 }
