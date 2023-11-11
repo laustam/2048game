@@ -43,7 +43,7 @@ class Game extends GameBase {
     setFillColor(Color.Brown)
     val text: String = "2048"
     val fontSize: Float = headerArea.width / 8
-    val position: Point = headerArea.center + Point(-(widthInPixels.toFloat / 3.5).toFloat, (headerArea.height / 3.5).toFloat)
+    val position: Point = headerArea.center + Point(-(widthInPixels.toFloat / 3.5).toFloat, (headerArea.height / 2))
     drawTextCentered(text, fontSize, position)
   }
 
@@ -51,15 +51,24 @@ class Game extends GameBase {
     setFillColor(Color.Grey)
     val text: String = "Score:\n" + gameLogic.getScore.toString
     val fontSize: Float = headerArea.width / 16
-    val position: Point = headerArea.center + Point(widthInPixels.toFloat / 3, headerArea.height / 10)
+    val position: Point = headerArea.center + Point(widthInPixels.toFloat / 3, (headerArea.height / 4.5).toFloat)
     drawTextCentered(text, fontSize, position)
   }
 
   def drawEndScreen(text: String, color: Color): Unit = {
+    def drawNewGame(): Unit = {
+      setFillColor(Color.Grey)
+      val text: String = "New Game"
+      val fontSize: Float = gridArea.width / 16
+      val position: Point = gridArea.center + Point(0, 20)
+      drawTextCentered(text, fontSize, position)
+    }
+
     setBackground(Color.COLOR_EMPTY)
     setFillColor(color)
     val fontSize: Float = gridArea.center.x / 4
     drawTextCentered(text, fontSize, gridArea.center)
+    drawNewGame()
   }
 
   def drawGrid(): Unit = {
@@ -87,7 +96,7 @@ class Game extends GameBase {
     def drawTileNumber(area: Rectangle, tile: Tile): Unit = {
       val num: String = tile.i.toString
       setFillColor(Color.Grey)
-      drawTextCentered(num, area.width / 3, area.center + Point(0, area.height / 8))
+      drawTextCentered(num, area.width / 3, area.center + Point(0, area.height / 4))
     }
   }
 
@@ -98,6 +107,10 @@ class Game extends GameBase {
     * @param event The key press event to handle
     */
   override def keyPressed(event: KeyEvent): Unit = {
+    if(gameLogic.isGameOver | gameLogic.hasWon) {
+      if (event.getKeyCode == VK_R) gameLogic = GameLogic()
+      return
+    }
 
     event.getKeyCode match {
       case VK_UP => gameLogic.moveUp()

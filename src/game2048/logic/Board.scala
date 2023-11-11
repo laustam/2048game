@@ -27,7 +27,7 @@ case class Board(board: Seq[Seq[Tile]],
 
     {
       if (move(dir) == this)
-        move(dir)
+        this
       else if (move(dir).goalReached)
         move(dir).copy(isWon = true)
       else
