@@ -31,9 +31,9 @@ class GameLogic(val randGen: RandomGenerator,
     board = board.step(Up)
   }
 
-  def isGameOver: Boolean = board.isFull
+  def isGameOver: Boolean = board.isGameOver
 
-  def hasWon: Boolean = board.isWon
+  def isWon: Boolean = board.isWon
 
   def getScore: Int = board.score
 
@@ -52,7 +52,8 @@ object GameLogic {
   val DefaultHeight: Int = 4
   val DefaultDims: Dimensions = Dimensions(width = DefaultWidth, height = DefaultHeight)
 
-  def apply() = new GameLogic(new ScalaRandomGen(),
+  def apply() = new GameLogic(
+    new ScalaRandomGen(),
     DefaultDims,
     makeEmptyBoard(DefaultDims))
 }

@@ -28,7 +28,7 @@ class Game extends GameBase {
   override def draw(): Unit = {
     drawHeader()
     drawGrid()
-    if (gameLogic.hasWon) drawEndScreen("YOU WIN!", Color.Brown)
+    if (gameLogic.isWon) drawEndScreen("YOU WIN!", Color.Brown)
     else if (gameLogic.isGameOver) drawEndScreen("GAME OVER!", Color.Black)
   }
 
@@ -107,7 +107,7 @@ class Game extends GameBase {
     * @param event The key press event to handle
     */
   override def keyPressed(event: KeyEvent): Unit = {
-    if(gameLogic.isGameOver | gameLogic.hasWon) {
+    if(gameLogic.isGameOver | gameLogic.isWon) {
       if (event.getKeyCode == VK_R) gameLogic = GameLogic()
       return
     }

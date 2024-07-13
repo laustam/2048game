@@ -5,11 +5,11 @@ import engine.random.RandomGenerator
 case class Board(board: Seq[Seq[Tile]],
                  randGen: RandomGenerator,
                  score: Int = 0,
-                 isFull: Boolean = false,
+                 isGameOver: Boolean = false,
                  isWon: Boolean = false) {
 
-  def checkIfFull: Board = {
-    if (emptyPoints.isEmpty) copy(isFull = true)
+  def checkIfGameOver: Board = {
+    if (getEmptyPoints.isEmpty) copy(isGameOver = true)
     else this
   }
 
@@ -19,11 +19,13 @@ case class Board(board: Seq[Seq[Tile]],
 
   def step(dir: Point): Board = {
     def canStep: Boolean = {
-      !isFull && !isWon
+      !(move(Left) == this &&
+        move(Right) == this &&
+        move(Up) == this &&
+        move(Down) == this)
     }
 
-    if (!canStep)
-      return this
+    if (!canStep | isWon) return checkIfGameOver
 
     {
       if (move(dir) == this)
@@ -32,7 +34,7 @@ case class Board(board: Seq[Seq[Tile]],
         move(dir).copy(isWon = true)
       else
         move(dir).addNewTile()
-    }.checkIfFull
+    }
   }
 
   def move(dir: Point): Board = {
@@ -103,24 +105,21 @@ case class Board(board: Seq[Seq[Tile]],
     false
   }
 
-  def emptyPoints: Seq[Point] = {
+  def getEmptyPoints: Seq[Point] = {
     var resSeq: Seq[Point] = Seq.empty
 
-    for (row <- board.indices) {
-      for (col <- board(row).indices) {
-        if (board(row)(col).i == 0) {
-          resSeq = resSeq :+ Point(col, row)
-        }
-      }
+    for (row <- board.indices; col <- board(row).indices) {
+      if (board(row)(col).i == 0)
+        resSeq = resSeq :+ Point(col, row)
     }
     resSeq
   }
 
   def addNewTile(): Board = {
     def getRandomPoint: Point = {
-      val availPoints: Seq[Point] = emptyPoints
+      val availPoints: Seq[Point] = getEmptyPoints
       val randIndex: Int = randGen.randomInt(availPoints.length)
-      emptyPoints(randIndex)
+      availPoints(randIndex)
     }
 
     def getNewTile: Tile = {
