@@ -40,6 +40,23 @@ class GameLogic(val randGen: RandomGenerator,
   def getCellType(p: Point): Tile = board.at(p).get
 }
 
+/* This object defines some boards for testing.
+To test these, change initialBoard passed to GameLogic in apply()
+TODO: figure out how to set up a proper testing environment */
+object Testing {
+  val gameOverBoard: Seq[Seq[Tile]] =
+    List(List(Tile(8), Tile(4), Tile(8), Tile(0)),
+      List(Tile(16), Tile(8), Tile(0), Tile(8)),
+      List(Tile(2), Tile(4), Tile(8), Tile(16)),
+      List(Tile(16), Tile(8), Tile(4), Tile(2)))
+
+  val winBoard: Seq[Seq[Tile]] =
+    List(List(Tile(2048), Tile(16), Tile(0), Tile(0)),
+      List(Tile(16), Tile(8), Tile(16), Tile(8)),
+      List(Tile(2), Tile(4), Tile(8), Tile(16)),
+      List(Tile(16), Tile(8), Tile(4), Tile(2)))
+}
+
 object GameLogic {
   val DrawSizeFactor: Int = 5
 
@@ -53,7 +70,7 @@ object GameLogic {
   val DefaultDims: Dimensions = Dimensions(width = DefaultWidth, height = DefaultHeight)
 
   def apply() = new GameLogic(
-    new ScalaRandomGen(),
-    DefaultDims,
-    makeEmptyBoard(DefaultDims))
+    randGen = new ScalaRandomGen(),
+    gridDims = DefaultDims,
+    initialBoard = makeEmptyBoard(DefaultDims))
 }
