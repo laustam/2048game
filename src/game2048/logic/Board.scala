@@ -8,11 +8,6 @@ case class Board(board: Seq[Seq[Tile]],
                  isGameOver: Boolean = false,
                  isWon: Boolean = false) {
 
-  def checkIfGameOver: Board = {
-    if (getEmptyPoints.isEmpty) copy(isGameOver = true)
-    else this
-  }
-
   def updateScore(inc: Int): Board = {
     copy(score = score + inc)
   }
@@ -25,7 +20,7 @@ case class Board(board: Seq[Seq[Tile]],
         move(Down) == this)
     }
 
-    if (!canStep | isWon) return checkIfGameOver
+    if (!canStep) return copy(isGameOver = true)
 
     {
       if (move(dir) == this)
