@@ -30,14 +30,23 @@ If multiple Java versions are installed locally, we can check which version is a
 
 ## Sneak peaks of the game
 
-Opening screen
-![Opening screen](images/openingscreen.png)
+### Opening screen
 
-Oh no! So many tiles on screen!
-![Oh no! So many tiles on screen!](images/manytiles.png)
+<p align="center">
+  <img src="images/openingscreen.png" alt="Opening screen">
+</p>
 
-Game over screen
-![Game over screen](images/gameover.png)
+### Oh no! So many tiles on screen!
+<p align="center">
+  <img src="images/manytiles.png" alt="Oh no! So many tiles on screen!">
+</p>
 
-Victory screen! Woohoo
-![Victory screen! Woohoo](images/victory.png)
+### Game over screen
+<p align="center">
+  <img src="images/gameover.png" alt="Game over screen">
+</p>
+
+### Victory screen! Woohoo
+<p align="center">
+  <img src="images/victory.png" alt="Victory screen! Woohoo">
+</p>
