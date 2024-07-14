@@ -7,7 +7,7 @@ until the target tile 2048 has been created.
 
 1. Tiles represent powers of 2, 2 being the smallest possible tile and 2048 (the target) being the largest.
 2. Tiles can be shifted up, down, left, and right with their corresponding keyboard keys.
-3. If the player fills the screen with tiles before creating the 2048 target tile, they loose.
+3. If the screen is filled with tiles and no move is possible, the player looses.
 4. Every time two equal-valued tiles are merged, the score increases by the outcome of the merging (ex: merging 2 and 2
    increases the score by 4).
 5. After the player makes a (successful) move, a new tile (with value 2 or 4) is spawned on the game board.
@@ -19,7 +19,14 @@ until the target tile 2048 has been created.
 3. Run the command ```./gradlew run```
 4. Enjoy!
 
-*Note:* I am using Java 8 version 1.8. I was not able to run it using different Java versions, only God knows why...
+## Dependencies
+
+### JDK version 8 / Java 1.8: 
+If multiple Java versions are installed locally, we can check which version is active in the local environment by using `java -version`. Given that jdk 8 is installed locally, we can change the java version used in the environment by using: 
+
+      export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+*Note:* This method has only been tested on my local machine (M1 Mac)
 
 ## Sneak peaks of the game
 
