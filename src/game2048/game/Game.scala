@@ -28,8 +28,8 @@ class Game extends GameBase {
   override def draw(): Unit = {
     drawHeader()
     drawGrid()
-    if (gameLogic.isWon) drawEndScreen("YOU WIN!", Color.Brown)
-    else if (gameLogic.isGameOver) drawEndScreen("GAME OVER!", Color.Black)
+    if (gameLogic.isGameOver) drawEndScreen("GAME OVER!", Color.Black)
+    else if (gameLogic.isWon) drawEndScreen("YOU WIN!", Color.Brown)
   }
 
   def drawHeader(): Unit = {
