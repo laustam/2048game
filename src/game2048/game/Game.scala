@@ -1,5 +1,3 @@
-// scalastyle:off
-
 package game2048.game
 
 import java.awt.event
@@ -9,8 +7,6 @@ import engine.graphics.{Color, Point, Rectangle}
 import game2048.logic.{Tile, Dimensions, GameLogic, Point => GridPoint}
 import processing.core.{PApplet, PConstants}
 import processing.event.KeyEvent
-//import game2048.logic._
-
 import Game._
 
 class Game extends GameBase {
