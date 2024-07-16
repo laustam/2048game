@@ -90,11 +90,9 @@ case class Board(board: Seq[Seq[Tile]],
   }
 
   def goalReached: Boolean = {
-    for (row <- board.indices) {
-      for (col <- board(row).indices) {
-        if (at(col, row).get == Goal) {
-          return true
-        }
+    for (row <- board.indices; col <- board(row).indices) {
+      if (at(col, row).get == Goal) {
+        return true
       }
     }
     false
