@@ -22,10 +22,12 @@ class Game extends GameBase {
   val gridArea: Rectangle = Rectangle(Point(0, headerHeightInPixels.toFloat), widthInPixels.toFloat, gridHeightInPixels.toFloat)
 
   override def draw(): Unit = {
-    drawHeader()
-    drawGrid()
     if (gameLogic.isGameOver) drawEndScreen("GAME OVER!", Color.Black)
     else if (gameLogic.isWon) drawEndScreen("YOU WIN!", Color.Brown)
+    else {
+      drawHeader()
+      drawGrid()
+    }
   }
 
   def drawHeader(): Unit = {
